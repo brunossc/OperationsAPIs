@@ -8,13 +8,13 @@ Serviços:
 - Operations.API => Pode inserir operações de débito e de crédito, com banco de dados In-Memory
 EndPoints:
 
-Swagger:
-https://localhost:58412/swagger/index.html
+   Swagger:
+    https://localhost:58412/swagger/index.html
 
 - Operations.Report.API => Disponibiliza o consolidado do dia das operações de crédito e débito efetuadas pelo serviço Operations.API, com banco de dados MongoDB
 
-Obter as operações por dia:
-  http://localhost:5422/getoperation 
+   Obter as operações por dia:
+    http://localhost:5422/getoperation 
 
 Para subir a aplicação você deve executar o comando abaixo no diretório "OperationsAPIs":
 
