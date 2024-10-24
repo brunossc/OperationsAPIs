@@ -19,7 +19,7 @@ services:
     image: ${DOCKER_REGISTRY-}operationsapi
     build:
       context: .
-      dockerfile: Operations.API/Dockerfile
+      dockerfile: src/Operations.API/Dockerfile
     depends_on:
       - rabbitmqInstance
 
@@ -27,7 +27,7 @@ services:
     image: ${DOCKER_REGISTRY-}reportapi
     build:
       context: .
-      dockerfile: Operations.Report.API/Dockerfile
+      dockerfile: src/Operations.Report.API/Dockerfile
     ports:
       - "5422:8080"
       - "55122:8081"
