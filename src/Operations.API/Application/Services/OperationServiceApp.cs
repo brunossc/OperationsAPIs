@@ -34,7 +34,7 @@ namespace Operations.API.Domain.Services
                 };
 
                 await _service.AddOperationAsync(operation)
-                    .ContinueWith(async (o) => 
+                    .ContinueWith(async (o) =>
                     {
                         if (o.IsCompletedSuccessfully)
                         {
@@ -48,7 +48,7 @@ namespace Operations.API.Domain.Services
 
                             await _bus.Publish(operationEvent);
                         }
-                    }, TaskContinuationOptions.ExecuteSynchronously);                
+                    }, TaskContinuationOptions.ExecuteSynchronously);
 
             }
             catch (Exception ex)

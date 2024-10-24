@@ -1,15 +1,13 @@
 using MassTransit;
-using Serilog;
+using Microsoft.EntityFrameworkCore;
+using Operations.API.Application.DTO;
 using Operations.API.Domain.Interfaces.Repositories;
 using Operations.API.Domain.Interfaces.Services;
 using Operations.API.Domain.Services;
-using Operations.API.Application.DTO;
-using Microsoft.Extensions.Configuration;
-using Operations.API.Infrastructure.Repositories;
 using Operations.API.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
-using System;
+using Operations.API.Infrastructure.Repositories;
 using Operations.SideCar.Enum;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,7 +41,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapPost("/addcredit", async (decimal value, IOperationServiceApp operationService) =>
+app.MapPost("/addCredit", async (decimal value, IOperationServiceApp operationService) =>
 {
     var operation = new OperationDTO(OperationType.Credit, Math.Abs(value));
     await operationService.AddOperationAsync(operation);

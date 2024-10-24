@@ -1,5 +1,4 @@
-﻿using Operations.Report.API.Domain.Entities;
-using Operations.SideCar.MQContracts;
+﻿using Operations.SideCar.MQContracts;
 
 namespace Operations.Report.API.Domain.Interfaces
 {

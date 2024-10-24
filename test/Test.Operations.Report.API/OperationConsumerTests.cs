@@ -1,14 +1,4 @@
-using MassTransit;
-using Microsoft.Extensions.Logging;
 using Moq;
-using Operations.Report.API.Application.Interfaces;
-using Operations.Report.API.Application.Services;
-using Operations.Report.API.Domain.Entities;
-using Operations.Report.API.Domain.Interfaces;
-using Operations.Report.API.Domain.Services;
-using Operations.Report.API.Infrastructure.Consumer;
-using Operations.SideCar.Enum;
-using Operations.SideCar.MQContracts;
 
 namespace Test.Operations.Report.API
 {

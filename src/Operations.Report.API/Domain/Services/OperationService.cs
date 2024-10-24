@@ -2,7 +2,6 @@
 using Operations.Report.API.Domain.Interfaces;
 using Operations.SideCar.Enum;
 using Operations.SideCar.MQContracts;
-using System.Diagnostics;
 
 namespace Operations.Report.API.Domain.Services
 {

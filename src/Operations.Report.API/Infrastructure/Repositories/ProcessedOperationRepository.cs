@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using Operations.Report.API.Domain.Entities;
 using Operations.Report.API.Domain.Interfaces;
 

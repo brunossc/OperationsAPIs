@@ -1,7 +1,6 @@
 ﻿using Operations.Report.API.Application.Interfaces;
 using Operations.Report.API.Domain.Entities;
 using Operations.Report.API.Domain.Interfaces;
-using Operations.Report.API.Domain.Services;
 using Operations.SideCar.MQContracts;
 
 namespace Operations.Report.API.Application.Services

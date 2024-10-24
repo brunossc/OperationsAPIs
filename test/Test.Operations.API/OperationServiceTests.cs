@@ -1,13 +1,4 @@
-using MassTransit;
-using Microsoft.Extensions.Logging;
 using Moq;
-using NUlid;
-using Operations.API.Application.DTO;
-using Operations.API.Domain.Entities;
-using Operations.API.Domain.Interfaces.Repositories;
-using Operations.API.Domain.Services;
-using Operations.SideCar.Enum;
-using Operations.SideCar.MQContracts;
 
 namespace Test.Operations.API
 {

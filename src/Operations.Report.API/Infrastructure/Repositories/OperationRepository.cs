@@ -1,10 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using Operations.Report.API.Domain.Entities;
 using Operations.Report.API.Domain.Interfaces;
-using System;
-using System.Collections;
-using System.Linq;
 
 namespace Operations.Report.API.Infrastructure.Repositories
 {
@@ -26,7 +22,7 @@ namespace Operations.Report.API.Infrastructure.Repositories
 
         public IQueryable<OperationDay> GetAsync()
         {
-            return  _collection.AsQueryable();
+            return _collection.AsQueryable();
         }
 
         public async Task<long> UpdateAsync(OperationDay entity)

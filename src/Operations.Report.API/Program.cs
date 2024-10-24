@@ -1,5 +1,4 @@
 using MassTransit;
-using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using Operations.Report.API.Application.Interfaces;
 using Operations.Report.API.Application.Services;

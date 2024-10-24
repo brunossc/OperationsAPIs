@@ -20,6 +20,9 @@ services:
     build:
       context: .
       dockerfile: src/Operations.API/Dockerfile
+    ports:
+    - "58412:8081"
+    - "5425:8080"
     depends_on:
       - rabbitmqInstance
 
