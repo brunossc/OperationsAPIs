@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Operations.API.Infrastructure.Repositories;
 using Operations.API.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using System;
+using Operations.SideCar.Enum;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,9 +43,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapPost("/addoperation", async (OperationDTO operationDto, IOperationServiceApp operationService) =>
+app.MapPost("/addcredit", async (decimal value, IOperationServiceApp operationService) =>
 {
-    await operationService.AddOperationAsync(operationDto);
+    var operation = new OperationDTO(OperationType.Credit, Math.Abs(value));
+    await operationService.AddOperationAsync(operation);
+    return Results.Ok();
+
+}).WithOpenApi();
+
+app.MapPost("/addDebit", async (decimal value, IOperationServiceApp operationService) =>
+{
+    var operation = new OperationDTO(OperationType.Debit, Math.Abs(value));
+    await operationService.AddOperationAsync(operation);
     return Results.Ok();
 
 }).WithOpenApi();

@@ -48,7 +48,7 @@ namespace Operations.API.Domain.Services
 
                             await _bus.Publish(operationEvent);
                         }
-                    });                
+                    }, TaskContinuationOptions.ExecuteSynchronously);                
 
             }
             catch (Exception ex)

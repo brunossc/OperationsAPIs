@@ -1,4 +1,6 @@
-﻿namespace Operations.API.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Operations.API.Domain.Entities
 {
     public class Operation
     {
@@ -7,7 +9,9 @@
         /// </summary>
         public string Id { get; set; }
         public DateTime Day { get; set; }
-        public int Type { get; set; }
-        public decimal Value { get; set; }
+        [Required]
+        public required int Type { get; set; }
+        [Required]
+        public required decimal Value { get; set; }
     }
 }
