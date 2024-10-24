@@ -1,0 +1,36 @@
+services:
+
+  rabbitmqInstance:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+    - "5672:5672"
+    - "15672:15672"
+    environment:
+    - RABBITMQ_DEFAULT_USER=guest
+    - RABBITMQ_DEFAULT_PASS=guest
+  
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  operations.api:
+    image: ${DOCKER_REGISTRY-}operationsapi
+    build:
+      context: .
+      dockerfile: Operations.API/Dockerfile
+    depends_on:
+      - rabbitmqInstance
+
+  report.api:
+    image: ${DOCKER_REGISTRY-}reportapi
+    build:
+      context: .
+      dockerfile: Operations.Report.API/Dockerfile
+    ports:
+      - "5422:8080"
+      - "55122:8081"
+    depends_on:
+      - rabbitmqInstance
+      - mongo
