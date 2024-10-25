@@ -1,5 +1,5 @@
 # OperationsAPIs
-![image](https://github.com/user-attachments/assets/8b0c0e55-f9bb-4dfd-aca3-8370da18b718)
+![image](https://github.com/user-attachments/assets/926aa412-453c-43f2-baac-35f293f10ead)
 
 A Aplicação consiste em 2 serviços e é necessário ter o Docker instalado na máquina:
 
